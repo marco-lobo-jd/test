@@ -13,13 +13,18 @@ module.exports = Factory.create({
    //  },
 
     //Charge Methods Create Next button @ Overview step
-    nextOverview_button_createPage: function(){
+    nextOverview_button_createPages: function(){
       return browser.driver.findElement(by.css('#createChargeMethodForm .modal-footer button'));
     },
 
-    //Detail button on the Charge Methods list
-    detail_button_listPage: function(){
-      return element.all(by.css('.fa-external-link')).get(0);
+    //Create New Charge Methods button on the Charge Methods list
+    create_button_listPage2: function(){
+      return element.all(by.css('[ng-click="showChargeMethodModal()"]')).get(0);
+    },
+
+    //Create New Charge Methods button on the Charge Methods list
+    create_button_listPage: function(){
+      return element.all(by.css('[ng-click="showChargeMethodModal()"]')).get(0);
     },
 
     //Edit button on the Charge Methods list
