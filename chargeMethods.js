@@ -13,8 +13,13 @@ module.exports = Factory.create({
    //  },
 
     //Charge Methods Create Next button @ Overview step
-    nextOverview_button_createPage: function(){
+    nextOverview_button_create_page: function(){
       return browser.driver.findElement(by.css('#createChargeMethodForm .modal-footer button'));
+    },
+
+    //new changes
+   validate_description_header: function () {
+      return element.all(by.css('.table th')).get(2);
     },
 
     //Detail button on the Charge Methods list
